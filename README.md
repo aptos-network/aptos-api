@@ -54,23 +54,43 @@ curl -X GET https://aptos-network.pro/api/create/keypair
 
 curl -X GET https://aptos-network.pro/api/create/keypair
 
+### Example: Creating a Keypair
+
+```bash
+curl -X GET https://aptos-network.pro/api/create/keypair
+```
 
 **Response:**
 
-{ "private_key": "4af6f3d0847e5df76536e9473a01c7855c3a08930ef7d9f3438f539f53ec9d84", "public_key": "2f098b194b16da9adf354dfb8e7b2e9e62b4c45d5be147a19d59545d0c4b71a0" }
+```json
+{
+  "private_key": "4af6f3d0847e5df76536e9473a01c7855c3a08930ef7d9f3438f539f53ec9d84",
+  "public_key": "2f098b194b16da9adf354dfb8e7b2e9e62b4c45d5be147a19d59545d0c4b71a0"
+}
+```
 
+---
 
 ### Example: Transferring Tokens
 
-curl -X POST https://aptos-network.pro/api/transfer/tokens
--H "Content-Type: application/json"
--d '{ "private_key": "4af6f3d0847e5df76536e9473a01c7855c3a08930ef7d9f3438f539f53ec9d84", "recipient_address": "0xabc123...", "amount": 100 }'
-
+```bash
+curl -X POST https://aptos-network.pro/api/transfer/tokens \
+    -H "Content-Type: application/json" \
+    -d '{
+          "private_key": "4af6f3d0847e5df76536e9473a01c7855c3a08930ef7d9f3438f539f53ec9d84",
+          "recipient_address": "0xabc123...",
+          "amount": 100
+        }'
+```
 
 **Response:**
 
-{ "status": "success", "transaction_hash": "0xabcdef123456" }
-
+```json
+{
+  "status": "success",
+  "transaction_hash": "0xabcdef123456"
+}
+```
 
 ---
 

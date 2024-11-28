@@ -1,50 +1,53 @@
-# aptos-api
-Aptos Advanced API
+# Aptos Advanced API
 
-The Aptos Advanced API provides developers with secure, easy-to-use access to the Aptos blockchain. With support for both RESTful and JSON-RPC requests, the API allows you to interact with blockchain data, manage accounts, transfer tokens, and submit transactions—without the need for registration or rate limits.
-Features
+The **Aptos Advanced API** provides developers with secure, easy-to-use access to the **Aptos blockchain**. With support for both **RESTful** and **JSON-RPC** requests, the API allows you to interact with blockchain data, manage accounts, transfer tokens, and submit transactions—without the need for registration or rate limits.
 
-    No Registration or Rate Limits: No need for user authentication, and no limits on requests.
-    Privacy-Focused: The API does not store or log any user data. Sensitive information remains in your control.
-    Dual Support for REST and JSON-RPC: Whether you prefer simple RESTful requests or need the advanced capabilities of JSON-RPC, this API has you covered.
-    Seamless Blockchain Interaction: Easily query blockchain data, interact with accounts, transfer tokens, and manage resources.
-    Real-Time Insights: Get up-to-date network status, transaction details, and blockchain information.
-    Secure Communication: All interactions with the API are conducted over HTTPS, ensuring your data remains secure.
+## Features
 
-Key Endpoints
+- **No Registration or Rate Limits**: No need for user authentication, and no limits on requests.
+- **Privacy-Focused**: The API does not store or log any user data. Sensitive information remains in your control.
+- **Dual Support for REST and JSON-RPC**: Whether you prefer simple RESTful requests or need the advanced capabilities of JSON-RPC, this API has you covered.
+- **Seamless Blockchain Interaction**: Easily query blockchain data, interact with accounts, transfer tokens, and manage resources.
+- **Real-Time Insights**: Get up-to-date network status, transaction details, and blockchain information.
+- **Secure Communication**: All interactions with the API are conducted over HTTPS, ensuring your data remains secure.
 
-Below are the key endpoints available in the Aptos Advanced API:
-1. Account Management
+## Key Endpoints
 
-    GET /api/create/keypair: Generate a new wallet with a private and public key.
-    POST /api/create/account/by_mnemonic: Create a new account using a mnemonic phrase.
-    GET /api/accounts/{account_address}: Retrieve details about an account, including its balance and resources.
-    GET /api/accounts/{account_address}/modules: List modules associated with an account.
-    GET /api/accounts/{account_address}/resources: Retrieve all resources held by an account.
+Below are the key endpoints available in the **Aptos Advanced API**:
 
-2. Token Operations
+### 1. **Account Management**
 
-    POST /api/transfer/tokens: Transfer tokens between wallets.
-    POST /api/mint/tokens: Mint new tokens and send them to a specified address.
+- **`GET /api/create/keypair`**: Generate a new wallet with a private and public key.
+- **`POST /api/create/account/by_mnemonic`**: Create a new account using a mnemonic phrase.
+- **`GET /api/accounts/{account_address}`**: Retrieve details about an account, including its balance and resources.
+- **`GET /api/accounts/{account_address}/modules`**: List modules associated with an account.
+- **`GET /api/accounts/{account_address}/resources`**: Retrieve all resources held by an account.
 
-3. Transactions
+### 2. **Token Operations**
 
-    POST /api/transactions: Submit a transaction to the network.
+- **`POST /api/transfer/tokens`**: Transfer tokens between wallets.
+- **`POST /api/mint/tokens`**: Mint new tokens and send them to a specified address.
 
-4. Blockchain Data
+### 3. **Transactions**
 
-    GET /api/blocks/{block_id}: Retrieve information about a specific block.
-    GET /api/blockchain/ledger: Retrieve the latest ledger data.
+- **`POST /api/transactions`**: Submit a transaction to the network.
 
-5. Network Information
+### 4. **Blockchain Data**
 
-    GET /api/network/info: Get status and health information of the Aptos network.
+- **`GET /api/blocks/{block_id}`**: Retrieve information about a specific block.
+- **`GET /api/blockchain/ledger`**: Retrieve the latest ledger data.
 
-API Usage
+### 5. **Network Information**
 
-You can interact with the Aptos Advanced API using any HTTP client, such as Postman, curl, or programmatically using libraries like axios (JavaScript), requests (Python), etc.
-Example: Creating a Keypair
+- **`GET /api/network/info`**: Get status and health information of the Aptos network.
 
+## API Usage
+
+You can interact with the **Aptos Advanced API** using any HTTP client, such as **Postman**, **curl**, or programmatically using libraries like **axios** (JavaScript), **requests** (Python), etc.
+
+### Example: Creating a Keypair
+
+```bash
 curl -X GET https://aptos-network.pro/api/create/keypair
 
 Response:
